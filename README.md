@@ -3,7 +3,7 @@ list some pages and demos
 
 ####1.文件拖拽上传项目
 
-地址：[文件拖拽上传](http://oakmyblog.com/projects/UploadFile/manage.html)
+地址：[文件拖拽上传](https://github.com/BetaMee/projects/UploadFile/manage.html)
 
 功能特点:
 
