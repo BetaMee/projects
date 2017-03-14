@@ -1,0 +1,76 @@
+.main{
+  width:100vw;
+  height:800px;
+  background: url('../../../client/assets/images/test.jpg') no-repeat center center fixed;
+  background-size:cover
+}
+
+.main2{
+  width:100vw;
+  height:800px;
+  background: url('../../../client/assets/images/test2.jpg') no-repeat center center fixed;
+  background-size:cover
+}
+
+/*动画*/
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    /*-webkit-transform: scale3d(.3, .3, .3);*/
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.animated {
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+
+@keyframes slideOutRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.slideOutRight {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+  position: absolute;
+  /*position: absolute;   */
+  display: none;
+}
+

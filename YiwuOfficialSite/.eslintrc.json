@@ -1,0 +1,25 @@
+{
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "allowImportExportEverywhere": false
+    },
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+    "rules": {
+        // 缩进为4个空格（默认值）
+        "indent": 2,
+        "no-var": 1,
+        "no-alert": 2,
+        //表示在Windows下默认的换行回车符，CRLF  \r\n
+        "linebreak-style":[1,"windows"],
+        "no-console":1
+    }
+}
