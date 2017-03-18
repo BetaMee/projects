@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
-import CSSStyles from './Indexpage.css';
+import classNames from 'classnames';
+import CSSStyles from './Detailpage.css';
 
 class Detailpage extends Component {
   constructor(props) {
@@ -10,13 +11,12 @@ class Detailpage extends Component {
     };
   }
   componentDidMount() {
-    // do something
     console.log('Detailpage');
   }
 
   render() {
     return (
-      <div className={CSSStyles.container}>
+      <div className={classNames(CSSStyles.container, CSSStyles.animated)}>
 
       </div>
     );

@@ -11,19 +11,17 @@ class Layout extends Component {
     console.log("layout");
     return (
         <div className={CSSStyles.layout}>
+            <Header />
+
             <ReactCSSTransitionGroup
               component="div"
-              className={CSSStyles.page}
+              className={CSSStyles.pageContainer}
               transitionName={{
-                appear: CSSStyles.fadeInUp,
-                appearActive: CSSStyles.fadeInUp,
                 enter: CSSStyles.fadeInUp,
                 enterActive: CSSStyles.fadeInUp,
-                leave: CSSStyles.fadeInUp,
-                leaveActive: CSSStyles.fadeInUp,
-              }}
-              transitionAppear
-              transitionAppearTimeout={10000}           
+                leave: CSSStyles.zoomOutUp,
+                leaveActive: CSSStyles.zoomOutUp,
+              }}     
               transitionEnterTimeout={1000}
               transitionLeaveTimeout={1000}
             >

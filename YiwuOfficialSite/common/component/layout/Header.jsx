@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router'; 
 import CSSStyles from './Header.css';
 
 class Header extends Component{
@@ -9,15 +10,10 @@ class Header extends Component{
   render(){
     return (
       <header className={CSSStyles.header}>
-        <p className={CSSStyles.logo}>
-          index
-        </p>
-        <ul className={CSSStyles.ul}>
-          <li>START</li>
-          <li>MORE</li>
-          <li>DOWNLOAD</li>
-          <li>ABOUTUS</li>          
-        </ul>
+        <Link to="/">HOME</Link>
+        <Link to="/detail">MORE</Link>
+        <Link to="/download">DOWNLOAD</Link>
+        <Link to="/about">ABOUTUS</Link>     
       </header>
     );
   }
