@@ -5,10 +5,8 @@ import webpack from 'webpack';
 
 //react服务端渲染配置
 import React from 'react';
-import {Provider} from 'react-redux';
 import {renderToString} from 'react-dom/server';
 import {match, RouterContext} from 'react-router';
-import configureStore from '../common/store/store';
 
 
 import AppRoutes from '../common/AppRoutes';//前端路由
@@ -54,19 +52,13 @@ app.get('*',(req, res)=>{
     if(err) {
       res.status(500).send(err.message);
     }else if(redirectLocation) {
-      console.log("redirection");
       res.redirect(302,redirectLocation.pathname+redirectLocation.search);
     }else if(renderProps) {
-
-    const store = configureStore(getInitialData());
-    let marked = renderToString(
-        <Provider store={store}>
-          <RouterContext {...renderProps}/>
-        </Provider>
-    );
-    const initHtml = renderFullPage(marked,store.getState(),process.env.NODE_ENV);
-    res.status(200).end(initHtml);
-
+      let marked = renderToString(
+            <RouterContext {...renderProps}/>
+      );
+      const initHtml = renderFullPage(marked,process.env.NODE_ENV);
+      res.status(200).end(initHtml);
     }else{
       res.status(404).end('404 not found');
     }

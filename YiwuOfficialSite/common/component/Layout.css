@@ -25,8 +25,114 @@
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
   }
 }
-/*动效*/
 
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes rotateOut {
+  from {
+    transform-origin: center;
+    opacity: 1;
+  }
+
+  to {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
+
+/*动效*/
+/*IN*/
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+}
+
+.flipInX {
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+/*OUT*/
 .zoomOutUp {
   animation-name: zoomOutUp;
   position: absolute;
@@ -34,10 +140,28 @@
   top: 0px;
 }
 
-.fadeInUp {
-  animation-name: fadeInUp;
+.slideOutLeft {
+  animation-name: slideOutLeft;
+  position: absolute;
+  left: 0px;
+  top: 0px
 }
 
+.rotateOut {
+  animation-name: rotateOut;
+  position: absolute;
+  left: 0px;
+  top: 0px
+}
+
+.slideOutDown {
+  animation-name: slideOutDown;
+  position: absolute;
+  left: 0px;
+  top: 0px
+}
+
+/*动画效果*/
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;

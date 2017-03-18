@@ -1,4 +1,4 @@
-function renderFullPage(html, initiaState,env) {
+function renderFullPage(html,env) {
   //根据生产和开发环境配置不同的页面
   if(env=='development'){
     return`
@@ -17,9 +17,6 @@ function renderFullPage(html, initiaState,env) {
             
 						<body>
 						<div id="root"></div>
-              <script>
-                window.__INITIAL_STATE__ = ${JSON.stringify(initiaState)};
-              </script>
 							<script src='/devClient.bundle.js'></script>
 						</body>     
 			</html>
@@ -46,9 +43,6 @@ function renderFullPage(html, initiaState,env) {
               ${html}
             </div>
           </div>
-          <script>
-            window.__INITIAL_STATE__ = ${JSON.stringify(initiaState)};
-          </script>
           <script src="/assets/client.bundle.js"></script>
         </body>
         </html>
