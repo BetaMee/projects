@@ -23,12 +23,9 @@ class Layout extends Component {
     console.log("layout");
     const EnterClass = EnterTransitionMap.get(this.props.location.pathname);
     const LeaveClass = LeaveTransitionMap.get(this.props.location.pathname);
-
-
     return (
         <div className={CSSStyles.layout}>
             <Header />
-
             <ReactCSSTransitionGroup
               component="div"
               className={CSSStyles.pageContainer}
