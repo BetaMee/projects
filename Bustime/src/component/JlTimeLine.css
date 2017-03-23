@@ -1,11 +1,14 @@
 .jltime{
-  height: 100%;
+  height: 80%;
   width:100px;
+  margin: 0px;
+  top:10%;
   position:absolute;
   right:0;
 
   display: flex;
   align-items: center;
   flex-direction: column ;
-  justify-content: space-around;
+  justify-content: space-between;
+
 }

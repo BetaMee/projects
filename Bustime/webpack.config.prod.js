@@ -34,7 +34,11 @@ module.exports={
             fallback: 'style-loader',
             use: [
                   {
-                    loader:'css-loader',
+                      loader:'css-loader',
+                      options:{
+                          modules:true,//开启CSS Module
+                          localIdentName:`[name]__[local]-[hash:base64:5]`
+                      }
                   },
                   
                   {

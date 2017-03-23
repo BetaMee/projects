@@ -1,7 +1,6 @@
-.Background{
+.bg{
   width: 100vw;
   height:100vh;
   background: url("../assets/restaurant_icons.png");
-
   position: relative;
 }

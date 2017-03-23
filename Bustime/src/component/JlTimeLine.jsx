@@ -7,7 +7,7 @@ export default class JlTimeLine extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      TimeArr: [], // 四个时间点
+      TimeArr: ['2018', '2019', '2010', '2011'], // 四个时间点
       PreNum: 0, // 已过期时间点
       NextNum: 0, // 未过期时间点
     };
@@ -15,7 +15,7 @@ export default class JlTimeLine extends Component {
   render() {
     return (
       <TimeLine
-        timeArr={this.state.timeArr}
+        timeArr={this.state.TimeArr}
         preNum={this.state.PreNum}
         nextNum={this.state.NextNum}
         display={CSSStyles.jltime}

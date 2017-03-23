@@ -2,15 +2,14 @@ import React from 'react';
 
 function TimeLine({timeArr, preNum, NextNum, display}) {
   const node = timeArr.map((time) => {
-    console.log(time);
     return (
-      <li>{time}</li>
+      <div>{time}</div>
     );
   });
   return (
-    <ul className={display}>
+    <div className={display}>
       {node}
-    </ul>
+    </div>
   );
 }
 
