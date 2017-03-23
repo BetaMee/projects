@@ -1,0 +1,12 @@
+.xptime{
+  height: 100%;
+  width:100px;
+  position:absolute;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column ;
+  justify-content: space-around;
+
+}

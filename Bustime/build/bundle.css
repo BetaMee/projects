@@ -1,34 +1,24 @@
-body{
-  margin: 0px;
+.jltime{
+  height: 100%;
+  width:100px;
+  position:absolute;
+  right:0;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column ;
+          flex-direction: column ;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
-
-.main{
-  width: 100vw;
-  height:100vh;
-  background: url(bundleImg/952cb93e.restaurant_icons.png);
-
-  position: relative;
-
-}
-
-.xpicon{
-  position: absolute;
-  width:60px;
-  height: 60px;
-  background: red;
-
-  left:30%;
-}
-
-.jlicon{
-  position: absolute;
-  width:60px;
-  height: 60px;
-  background: blue;
-
-  right: 30%;
-}
-
 .xptime{
   height: 100%;
   width:100px;
@@ -50,27 +40,10 @@ body{
   -ms-flex-pack: distribute;
       justify-content: space-around;
 
-}
+}.Background{
+  width: 100vw;
+  height:100vh;
+  background: url(bundleImg/952cb93e.restaurant_icons.png);
 
-.jltime{
-  height: 100%;
-  width:100px;
-  position:absolute;
-  right:0;
-
-  display: -webkit-box;
-
-  display: -ms-flexbox;
-
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column ;
-          flex-direction: column ;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-
+  position: relative;
 }

@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const APP_PATH = path.resolve(__dirname, './src/index.js');
+const APP_PATH = path.resolve(__dirname, './src/index.jsx');
 const BUILD_PATH = path.resolve(__dirname, './build');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");//将所有CSS文件打包
 const autoprefixer = require('autoprefixer');
@@ -22,9 +22,10 @@ module.exports={
       {
         test:/\.(js|jsx)$/,
         exclude:/node_modules/,
-        use: [
-          'babel-loader',
-        ]
+        use: {
+          loader:'babel-loader',  
+        }
+        
       },
 
       {

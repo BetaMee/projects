@@ -21,6 +21,7 @@
     "rules": {
         "no-alert": 0,
         //表示在Windows下默认的换行回车符，CRLF  \r\n
-        "linebreak-style":[1,"windows"]
+        "linebreak-style":[1,"windows"],
+        "no-console":"off"
     }
 }
