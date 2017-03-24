@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/collection/mdStyle/css/fonts.css" rel="stylesheet">
+    <link href="/collection/mdStyle/css/materialize.min.css"  rel="stylesheet">
+    <style>
+    /*chrome滚动条*/ 
+    ::-webkit-scrollbar-track-piece{ 
+     -webkit-border-radius:0; 
+     border-radius:0; 
+    } 
+    ::-webkit-scrollbar{ 
+        width:6px; 
+        height:8px; 
+    } 
+    ::-webkit-scrollbar-thumb{ 
+        height:50px; 
+        background-color:#bdbdbd; 
+        -webkit-border-radius:4px; 
+        border-radius:4px;
+        outline-offset:-2px; 
+        border: 2px solid #000; 
+    } 
+    ::-webkit-scrollbar-thumb:hover{ 
+        height:50px; 
+        background-color:#bdbdbd; 
+        -webkit-border-radius:4px;
+        border-radius:4px;
+    }
+    </style>
+</head>
+<body>
+    <div id="childFrame">
+    </div>          
+<script>
+    window.onload=function(){
+        //初始刷新
+        refresh();
+    }
+    function delNode(e){
+        //将自定的数据保存在一个变量
+        var dataSet=e.dataset;
+        fetch('/collection/deleContent',{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `deleid=${dataSet.deleid}`
+        }).then(function(response) {
+            return response.json();
+        }).then(function(results) {
+            parent.showInfo("删除成功");
+            refresh(dataSet.categories);//重新刷新
+        }).catch(function(e) {
+            parent.showInfo("Oops, error");            
+            console.log(e.message);
+        });
+    }
+    //删除所有子节点
+    function removeAllChild(parent){
+        if(parent.nodeType!==1)return false;
+        while(parent.hasChildNodes()) //当div下还存在子节点时 循环继续
+        {
+            parent.removeChild(parent.firstChild);
+        }
+    }
+    //进行DOM操作，添加到界面上
+    function dealResponse(data){
+        var childFrame=document.getElementById("childFrame");
+        removeAllChild(childFrame);
+        for(let i=0;i<data.length;i++){
+            //构建包围div
+            var wrap=document.createElement('div');
+            wrap.setAttribute('class','row valign-wrapper');
+            //构建图片节点
+            var picWrap=document.createElement('div');
+            picWrap.setAttribute('class','col s4');
+
+            var picNode=document.createElement('img');
+            picNode.setAttribute('src',data[i].picUrl);
+            picNode.setAttribute('alt','#');
+            picNode.setAttribute('class','responsive-img');
+
+            picWrap.appendChild(picNode);
+            //构建描述节点
+            var txtWrap=document.createElement('div');
+            txtWrap.setAttribute('class','col s8');
+
+            var pNode=document.createElement('p');
+            pNode.setAttribute('class','black-text');
+            //标题链接
+            var txtNode=document.createTextNode(data[i].title);
+            //换行链接
+            var brNode=document.createElement('br');
+            //文章链接
+            var linkNode=document.createElement('a');
+            linkNode.setAttribute('href',data[i].pageUrl);
+            var linkTxt=document.createTextNode("阅读");
+            linkNode.appendChild(linkTxt);
+            //空白节点
+            var spaceNode=document.createElement('span');
+            var spaceTxt=document.createTextNode(" ");
+            spaceNode.appendChild(spaceTxt);
+            //删除链接
+            var deleNode=document.createElement('a');
+            deleNode.setAttribute('data-deleId',data[i].ObjectId);
+            deleNode.setAttribute('data-categories',data[i].categories);
+            deleNode.setAttribute('href','#');
+            deleNode.setAttribute('onclick','delNode(this)');
+            var deleTxt=document.createTextNode("删除");
+            deleNode.appendChild(deleTxt);
+
+            pNode.appendChild(txtNode);
+            pNode.appendChild(brNode);
+            pNode.appendChild(linkNode);
+            pNode.appendChild(spaceNode);            
+            pNode.appendChild(deleNode);
+
+            txtWrap.appendChild(pNode);
+
+            //集合起来
+            wrap.appendChild(picWrap);
+            wrap.appendChild(txtWrap);   
+
+            childFrame.appendChild(wrap);
+        }
+    }
+    //根据类别进行刷新数据
+    function refresh(categories="美人志"){
+        //调用父域的样式刷新函数改变样式
+        parent.styleChange(categories);
+
+        fetch(`/collection/getContent?categories=${categories}`).then(function(response) {
+            return response.json();
+        }).then(function(data) {
+            dealResponse(data);
+        }).catch(function(e) {
+            parent.showInfo("Oops, error");            
+            console.log(e.message);
+        });
+    }
+</script>
+</body>
+</html>

@@ -10,6 +10,9 @@ import CSSStyles from './App.css';
 
 // 解析时间
 const formatTime = (date) => {
+  if (typeof date !== 'object' || !(date instanceof Date)) { // date必须为Date类型
+    return false;
+  }
   let minTime = date.getMinutes();
   let secTime = date.getSeconds();
   if (parseInt(minTime, 10) < 10) {
@@ -19,7 +22,7 @@ const formatTime = (date) => {
     secTime = `0${secTime}`;
   }
   return `${date.getHours()}:${minTime}:${secTime}`;
-}
+};
 
 // 比较时间
 const compareTime = (preTime, nowTime) => { // 如果preTime > nowTime，那么退出，return true
@@ -36,7 +39,7 @@ const compareTime = (preTime, nowTime) => { // 如果preTime > nowTime，那么�
     return true;
   }
   return false;
-}
+};
 
 // 选择数组
 const getDisplayTimeArr = (timeArr, nowTime) => { // 通过当下时间获取四个或者三个数组
@@ -96,8 +99,7 @@ const getDisplayTimeArr = (timeArr, nowTime) => { // 通过当下时间获取四
     }
   }
   return displayArr;
-}
-
+};
 
 
 export default class App extends Component {
@@ -105,10 +107,10 @@ export default class App extends Component {
     super(props);
     this.state = {
       XpTimeArr: this.props.data[0], // 犀浦时间数据
-      JlTimeArr: this.props.date[1], //九里时间数据
+      JlTimeArr: this.props.date[1], // 九里时间数据
       nowTime: formatTime(new Date()), // 当下时间
-      disXpTimeArr: [], //选中的犀浦时间组，用于将要显示的时间选出来
-      disJlTimeArr: [], //选中的九里时间组
+      disXpTimeArr: [], // 选中的犀浦时间组，用于将要显示的时间选出来
+      disJlTimeArr: [], // 选中的九里时间组
     };
   }
 

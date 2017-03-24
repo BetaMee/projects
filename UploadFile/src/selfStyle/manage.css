@@ -1,0 +1,68 @@
+#drop_zone{
+      width:100%;
+      height:300px;
+      border: 8px dashed #ffffff  ;
+      border-radius:25px;
+      /*box-shadow: 2px 2px 2px #333333;*/
+      background-color: #bdbdbd;
+    }
+    .material-icons.md-48 { 
+      font-size: 48px; 
+    }
+    .material-icons.md-light.md-inactive { 
+      color: rgba(255, 255, 255, 1); 
+    }
+    .preview{
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main{
+      margin-top:10vh;
+      height:70vh;
+    }
+    .nav-top{
+      height: 10vh;
+    }
+
+    .main-panel{
+      height:100%;
+    }
+    .imgDrop{
+      height: 100%;
+
+      display: flex;
+      flex-direction:column;
+      justify-content: flex-start;
+    }
+    /*预览区*/
+    .prePanel{
+      height:100%; 
+
+      display: flex;
+      justify-content: center;     
+    }
+    .prePanel ul{
+      list-style: none;
+      display:flex;
+      justify-content: space-around;
+      align-items: center;
+
+      height: 10%;
+      border-bottom: 2px solid black;
+      margin:0px 0px 0px 3px;
+      /*background-color;*/
+    }
+    .prePanel-main{
+      border:2px solid black;
+      border-radius:8px;
+      width:70%;
+    }
+    .prePanel-main a{
+      color:#424242;
+      font-weight: 700;
+    }
