@@ -28,89 +28,107 @@ const formatTime = (date) => {
 const compareTime = (preTime, nowTime) => { // 如果preTime > nowTime，那么退出，return true
   const preTimeArr = preTime.split(':');
   const nowTimeArr = nowTime.split(':');
-
-  if (parseInt(preTimeArr[0], 10) > parseInt(nowTimeArr[0], 10)) { // 时分秒
+  // 比较时
+  if (parseInt(preTimeArr[0], 10) > parseInt(nowTimeArr[0], 10)) {
     return true;
+  } else if (parseInt(preTimeArr[0], 10) < parseInt(nowTimeArr[0], 10)) {
+    return false;
   }
+  // 比较分
   if (parseInt(preTimeArr[1], 10) > parseInt(nowTimeArr[1], 10)) {
     return true;
+  } else if (parseInt(preTimeArr[1], 10) < parseInt(nowTimeArr[1], 10)) {
+    return false;
   }
+  // 比较秒
   if (parseInt(preTimeArr[2], 10) > parseInt(nowTimeArr[2], 10)) {
     return true;
+  } else if (parseInt(preTimeArr[2], 10) < parseInt(nowTimeArr[2], 10)) {
+    return false;
   }
+  // 时分秒一样
   return false;
 };
 
+
+// 对时间数组进行分组
+const splitTimeZone = (timeArr) => {
+  const arrLength = timeArr.length;
+  const TimeZoneStackArr = [];
+  let TimeZoneStack = [];
+  if (arrLength <= 4) { // 如果数组小于4，那么就分一组
+    for (let i = 0; i < arrLength; i++) {
+      TimeZoneStack.push(timeArr[i]);
+    }
+    return TimeZoneStackArr.push(TimeZoneStack);
+  }
+  // 大于4的情况
+  let n = 0; // 夹心层的数量
+  let zoneNum = 0; // 区块数量
+  // 1. 先求出n的值
+  if (arrLength % 3 === 2) {
+    n = ((arrLength - 2) / 3) - 1;
+  } else if (arrLength % 3 === 0) {
+    n = (arrLength / 3) - 2;
+  } else if (arrLength % 3 === 1) {
+    n = ((arrLength - 4) / 3) - 1;
+  }
+  // 2.得到区块数量
+  zoneNum = n + 2;
+  // 3.找到标号，分区，总共n+2个标号区
+  for (let i = 0; i < zoneNum; i++) {
+    TimeZoneStack = []; // 每次循环都要清空；
+    if (i === (n + 1)) { // 对于最后一个组，考虑它不一定有四个，那么单独分一下
+      for (let j = i * 3; j < arrLength; j++) {
+        TimeZoneStack.push(timeArr[j]);
+      }
+    } else {
+      for (let j = i * 3; j < (i * 3) +4; j++) {
+        TimeZoneStack.push(timeArr[j]);
+      }
+    }
+    TimeZoneStackArr.push(TimeZoneStack);
+  }
+  return TimeZoneStackArr;
+}
+
 // 选择数组
 const getDisplayTimeArr = (timeArr, nowTime) => { // 通过当下时间获取四个或者三个数组
-  const arrLength = timeArr.length;
-  let displayArr = [];
-  let index; // nowTime的位置
-  let counts; // timeArr的分组数
-
-  // 1.计算nowTime的位置
-  for (let i = 0; i < arrLength; i++) {
-    if (compareTime(timeArr[i], nowTime)) {
+  const TimeZoneArr = splitTimeZone(timeArr);
+  let index;
+  let headTime;
+  let tailTime;
+  for (let i = 0; i < TimeZoneArr.length; i++) {
+    headTime = TimeZoneArr[i][0]; // 每一个数组的头元素
+    tailTime = TimeZoneArr[i][TimeZoneArr[i].length - 1]; // 每一个数组的尾元素
+    if (i === 0) { // 首数组特殊处理
+      if (compareTime(headTime, nowTime)) { // 当nowTime < headTime，说明还没进入区域
+        index = 0;
+      }
+    }
+    if (i === (TimeZoneArr.length - 1)) { // 尾组也要判断
+      if (!compareTime(tailTime, nowTime)) { // 当nowTime >= headTime，说明超越了区域
+        index = 0;
+      }
+    }
+    // headTime <=nowTime <tailTime
+    if (compareTime(tailTime, nowTime) && !compareTime(headTime, nowTime)) {
       index = i;
-      break;
-    }
-
-    if (i === arrLength) { // 当nowTime比preTime都大时，则赋值给index以timeArr.length
-      index = arrLength;
     }
   }
-
-  // 2. 对timeArr进行分组，确定 4-4-4或者4-4-3或者4-4-2或者4-4-1型,4-4-1需要拆分为4-3-2
-  if (arrLength < 4) { // 特殊情况，数组只有不到四个
-    counts = 1;
-  } else if (arrLength % 4 === 1) {  // 余数为1的4-4-1，拆分
-    counts = ((arrLength - 5) / 4) + 2;
-  } else {
-    counts = (arrLength - (arrLength % 4)) + 1;
-  }
-
-  // 3.由index和counts挑选数组
-  if (index === arrLength) { // 假如index为arrlength，说明过时了，没有班车了
-    displayArr = [];
-  } else if (counts === 1) { // 说明数组小于四个，只有分为一组，一般数据足够的情况下是不会发生的
-    for (let i = 0; i < arrLength; i++) {
-      displayArr.push(timeArr[i]);
-    }
-  } else {
-    const n = (index - (index % 4)) / 4; // 要跳过的组数
-    if (arrLength % 4 === 1) { // 对 4-4-1型特别划分
-      if ((counts - n) === 2) { // 只剩最后两组
-        for (let i = n * 4; i < ((n * 4) + 3); i++) {
-          displayArr.push(timeArr[i]);
-        }
-      } else if ((counts - n) === 1) { // 只剩最后一组
-        for (let i = (arrLength - 2); i < arrLength; i++) {
-          displayArr.push(timeArr[i]);
-        }
-      }
-    } else if (n === (counts - 1)) { // 恰好只剩最后一组
-      for (let i = n * 4; i < arrLength; i++) {
-        displayArr.push(timeArr[i]);
-      }
-    } else { // 只跳过中间部分，这时候有四个数组
-      for (let i = n * 4; i < ((n * 4) + 4); i++) {
-        displayArr.push(timeArr[i]);
-      }
-    }
-  }
-  return displayArr;
+  return TimeZoneArr[index];
 };
-
 
 export default class App extends Component {
   constructor(props) {
     super(props);
+    const nowTime = formatTime(new Date());
     this.state = {
       XpTimeArr: this.props.data[0], // 犀浦时间数据
-      JlTimeArr: this.props.date[1], // 九里时间数据
-      nowTime: formatTime(new Date()), // 当下时间
-      disXpTimeArr: [], // 选中的犀浦时间组，用于将要显示的时间选出来
-      disJlTimeArr: [], // 选中的九里时间组
+      JlTimeArr: this.props.data[1], // 九里时间数据
+      disXpTimeArr: getDisplayTimeArr(this.props.data[0], nowTime), // 选中的犀浦时间组，用于将要显示的时间选出来
+      disJlTimeArr: getDisplayTimeArr(this.props.data[1], nowTime), // 选中的九里时间组
+      nowTime, // 当下时间
     };
   }
 
