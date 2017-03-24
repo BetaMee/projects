@@ -1,7 +1,7 @@
 # Project Demos
 放一些前端小项目或者demo
 
-####1.文件拖拽上传项目
+### 1.文件拖拽上传项目
 
 地址：[文件拖拽上传](http://loveoak.leanapp.cn/collection/manage)
 
@@ -13,8 +13,18 @@
 
 未来安排：
 
-1. 使用ES6重新组织
+- 使用ES6重新组织
 
-2. 多文件上传
+- 多文件上传
+
+
+### 2.第二课堂
+
+给团委开发的第二课堂项目
+
+[第二课堂](http://1.youthedu.applinzi.com/build/)
+
+
+
 
 
