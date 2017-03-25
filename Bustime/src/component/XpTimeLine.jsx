@@ -1,26 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TimeLine from './unit/TimeLine';
 import CSSStyles from './XpTimeLine.css';
+import { compareTime } from './lib/helper';
 
+function XpTimeLine({ disTimeArr, nowTime }) {
+  let index;
+  for (let i = 0; i < disTimeArr.length - 1; i++) {
+    // disTimeArr[i] <= nowTime < disTimeArr[i+1]
+    if (!compareTime(disTimeArr[i], nowTime) && compareTime(disTimeArr[i + 1], nowTime)) {
+      index = i;
+      break;
+    }
+  }
+  const preNum = index + 1;
+  const nextNum = disTimeArr.length - preNum;
 
-export default class XpTimeLine extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      TimeArr: ['2015', '2016', '2018', '2017'], // 四个时间点
-      PreNum: 0, // 已过期时间点
-      NextNum: 0, // 未过期时间点
-    };
-  }
-  render() {
-    console.log(CSSStyles);
-    return (
-      <TimeLine
-        timeArr={this.state.TimeArr}
-        preNum={this.state.PreNum}
-        nextNum={this.state.NextNum}
-        display={CSSStyles.xptime}
-      />
-    );
-  }
+  return (
+    <TimeLine
+      timeArr={disTimeArr}
+      preNum={preNum}
+      nextNum={nextNum}
+      disStyle={CSSStyles.xpTimeStyle}
+      preStyle={CSSStyles.xpPreStyle}
+      nextStyle={CSSStyles.xpNextStyle}
+    />
+  );
 }
+
+export default XpTimeLine;

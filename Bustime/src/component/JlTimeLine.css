@@ -1,4 +1,4 @@
-.jltime{
+.jlTimeStyle{
   height: 80%;
   width:100px;
   margin: 0px;
@@ -10,5 +10,13 @@
   align-items: center;
   flex-direction: column ;
   justify-content: space-between;
-
 }
+
+.jlPreStyle{
+  color: aqua;
+}
+
+.jlNextStyle{
+  color: brown;
+}
+

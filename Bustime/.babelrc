@@ -8,5 +8,14 @@
     // Stage 2 是 "草案", 4 是 "已完成", 0 is "稻草人(strawman)"。
     // 详情查看 https://tc39.github.io/process-document/
     "react"
-  ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        ["transform-react-remove-prop-types", {
+          "ignoreFilenames": ["node_modules"]
+        }]
+      ]
+    }
+  }
 }

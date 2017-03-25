@@ -1,28 +1,34 @@
-.JlCarLine__svgcar-1TtAf{
-    width: 50px;
-    height: 50px;
-    background-color:blue;
-    position: absolute;
-    top: 0;
-    right:30%;
-}
-
-.JlCarLine__carline-KwJ0Z{
-    height: 100%;
-    width: 10px;
-    background-color: yellow ;
-    position: absolute;
-    right:50%;
-}
-
-
+/*容器样式*/
 .JlCarLine__container-2hFEY{
     position: absolute;
     width:100px;
     height: 80%;
     top:10%;
     right:25%;
-}.JlTimeLine__jltime-2rlBI{
+}
+/*汽车线样式*/
+.JlCarLine__carline-KwJ0Z{
+    height: 100%;
+    width: 10px;
+    border-radius: 5px;
+    position: absolute;
+    right:50%;
+}
+
+/*汽车样式*/
+.JlCarLine__svgcar-1TtAf{
+    width: 50px;
+    height: 50px;
+    background-color:red;
+    position: absolute;
+    top: 0;
+    right:30%;
+}
+
+
+
+
+.JlTimeLine__jlTimeStyle-199I6{
   height: 80%;
   width:100px;
   margin: 0px;
@@ -45,8 +51,35 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-
 }
+
+.JlTimeLine__jlPreStyle-2ZhCU{
+  color: aqua;
+}
+
+.JlTimeLine__jlNextStyle-1wezO{
+  color: brown;
+}
+
+/*容器样式*/
+.XpCarLine__container-2XrNp{
+    position: absolute;
+    width:100px;
+    height: 80%;
+    top:10%;
+    left:25%;
+}
+
+/*汽车经过的线*/
+.XpCarLine__carline-2QFvC{
+    height: 100%;
+    width: 10px;
+    border-radius: 5px;
+    position: absolute;
+    left:50%;
+}
+
+/*车的样式*/
 .XpCarLine__svgcar-2KfWw{
     width: 50px;
     height: 50px;
@@ -56,21 +89,7 @@
     left:30%
 }
 
-.XpCarLine__carline-2QFvC{
-    height: 100%;
-    width: 10px;
-    background-color: yellow ;
-    position: absolute;
-    left:50%;
-}
-
-.XpCarLine__container-2XrNp{
-    position: absolute;
-    width:100px;
-    height: 80%;
-    top:10%;
-    left:25%;
-}.XpTimeLine__xptime-qyavR{
+.XpTimeLine__xpTimeStyle-3PEdo{
   height: 80%;
   width:100px;
   position:absolute;
@@ -93,6 +112,14 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.XpTimeLine__xpPreStyle-iSX97{
+  color: aqua;
+}
+
+.XpTimeLine__xpNextStyle-1qsZj{
+  color: brown;
 }.App__bg-1PiyS{
   width: 100vw;
   height:100vh;

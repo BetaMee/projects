@@ -1,9 +1,15 @@
 import React from 'react';
 
 
-function SvgCar({posX, posY, display}) {
+function SvgCar({ prePercent, carStyle }) {
+  const carpos = {
+    top: `${prePercent * 100}%`,
+  };
   return (
-    <div className={display} />
+    <div
+      className={carStyle}
+      style={carpos}
+    />
   );
 }
 

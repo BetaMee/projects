@@ -1,4 +1,4 @@
-.xptime{
+.xpTimeStyle{
   height: 80%;
   width:100px;
   position:absolute;
@@ -10,4 +10,12 @@
   align-items: center;
   flex-direction: column ;
   justify-content: space-between;
+}
+
+.xpPreStyle{
+  color: aqua;
+}
+
+.xpNextStyle{
+  color: brown;
 }

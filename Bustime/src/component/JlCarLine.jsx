@@ -3,32 +3,27 @@ import CarLine from './unit/CarLine';
 import SvgCar from './unit/SvgCar';
 
 import CSSStyles from './JlCarLine.css';
+import { subtractTimes } from './lib/helper';
 
-export default class JlCarLine extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      posX: 10, // 车的位置
-      posY: 10,
-
-      prepercent: 20, // 进度条
-      nextpercent: 80,
-    };
-  }
-  render() {
-    return (
-      <div className={CSSStyles.container}>
-        <CarLine
-          display={CSSStyles.carline}
-          prepercent={this.state.prepercent}
-          nextpercent={this.state.nextpercent}
-        />
-        <SvgCar
-          display={CSSStyles.svgcar}
-          posX={this.state.posX}
-          posY={this.state.posY}
-        />
-      </div>
-    );
-  }
+function JlCarLine({ startTime, endTime, nowTime }) {
+  const timeInterval = subtractTimes(endTime, startTime);
+  const prePercent = subtractTimes(nowTime, startTime) / timeInterval;
+  console.log('---JL----');
+  console.log(timeInterval);
+  console.log(prePercent);
+  console.log('---*---');
+  return (
+    <div className={CSSStyles.container}>
+      <CarLine
+        lineStyle={CSSStyles.carline}
+        prePercent={prePercent}
+      />
+      <SvgCar
+        carStyle={CSSStyles.svgcar}
+        prePercent={prePercent}
+      />
+    </div>
+  );
 }
+
+export default JlCarLine;
