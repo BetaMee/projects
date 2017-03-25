@@ -3,8 +3,8 @@
   width:100px;
   position:absolute;
   margin:0px;
-  top:10%;
-  left: 0;
+  top:15%;
+  left: 5%;
 
   display: flex;
   align-items: center;
@@ -12,10 +12,3 @@
   justify-content: space-between;
 }
 
-.xpPreStyle{
-  color: aqua;
-}
-
-.xpNextStyle{
-  color: brown;
-}

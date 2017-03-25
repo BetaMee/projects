@@ -13,16 +13,12 @@ function JlTimeLine({ disTimeArr, nowTime }) {
     }
   }
   const preNum = index + 1;
-  const nextNum = disTimeArr.length - preNum;
 
   return (
     <TimeLine
       timeArr={disTimeArr}
       preNum={preNum}
-      nextNum={nextNum}
       disStyle={CSSStyles.jlTimeStyle}
-      preStyle={CSSStyles.jlPreStyle}
-      nextStyle={CSSStyles.jlNextStyle}
     />
   );
 }

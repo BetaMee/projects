@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Orbitron-Light'), local('Orbitron-Regular'), url("../../assets/Orbitron.woff2") format('woff2');
+}
+
+.fontStyle {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4em;
+}
+
+
+.expired{
+    /*opacity: 0.7;*/
+    color: #1e1a1a;
+    opacity: 0.3;
+}
+
+.next{
+    color: #1e1a1a;
+}

@@ -1,6 +1,40 @@
 .bg{
   width: 100vw;
   height:100vh;
-  background: url("../assets/restaurant_icons.png");
+  /*background: url("../assets/restaurant_icons.png");*/
+  background:  #424242;
+  /*filter: blur(3px);*/
+  /*opacity: 0.5;*/
   position: relative;
+  /*z-index: 2;*/
+}
+
+.XpClockStyle{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  /*font-size: 1.2em;*/
+  right: 5%;
+  top:5px;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.JlClockStyle{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  /*font-size: 1.2em;*/
+  left: 5%;
+  top:5px;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }

@@ -4,10 +4,11 @@ import JlCarLine from './JlCarLine';
 import JlTimeLine from './JlTimeLine';
 import XpCarLine from './XpCarLine';
 import XpTimeLine from './XpTimeLine';
+import Clock from './Clock';
 // 引入样式
 import CSSStyles from './App.css';
 // 引入外部函数
-import { formatTime, compareTime, getDisplayTimeArr } from './lib/helper';
+import { formatTime, compareTime, getDisplayTimeArr, countTimeInterval } from './lib/helper';
 
 
 export default class App extends Component {
@@ -30,7 +31,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    console.log('app componentDidMount');
+    // console.log('app componentDidMount');
     setInterval(() => { // 定时器
       const nowTime = formatTime(new Date()); // 当下时间
       let disXpTimeArr = [];
@@ -60,10 +61,7 @@ export default class App extends Component {
   }
 
   render() {
-    console.log('---app render----');
-    console.log(this.state);
-    console.log('---*---');
-
+    // console.log('---app render----');
     const disXpTimeArr = this.state.disXpTimeArr;
     const disJlTimeArr = this.state.disJlTimeArr;
     const nowTime = this.state.nowTime;
@@ -73,8 +71,23 @@ export default class App extends Component {
 
     const JlStartTime = disJlTimeArr[0];
     const JlEndTime = disJlTimeArr[disJlTimeArr.length - 1];
+
+    const XpTimeInterval = countTimeInterval(disXpTimeArr, nowTime);
+    const JlTimeInterval = countTimeInterval(disJlTimeArr, nowTime);
+    console.log(XpTimeInterval);
     return (
       <div className={CSSStyles.bg}>
+        <Clock
+          timeInterval={XpTimeInterval}
+          clockStyle={CSSStyles.XpClockStyle}
+          station="J-X"
+        />
+        <Clock
+          timeInterval={JlTimeInterval}
+          clockStyle={CSSStyles.JlClockStyle}
+          station="X-J"
+        />
+
         <XpTimeLine
           disTimeArr={disXpTimeArr}
           nowTime={nowTime}

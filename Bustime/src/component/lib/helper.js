@@ -120,11 +120,31 @@ const convertTimeToNum = (time) => {
     (parseInt(timeArr[0], 10) * 60) + (parseInt(timeArr[1], 10))
   );
 }
-
+// 时间相减
 const subtractTimes = (time1, time2) => ( // time1-time2
   parseInt(convertTimeToNum(time1) - convertTimeToNum(time2), 10)
 );
 
+// 在给定的时间数组中计算
+const countTimeInterval = (timeArr, nowTime) => {
+  let index;
+  // nowTime >timeArr[timeArr.lenght - 1] , 这种情况是已经越过了正常时间，到了晚上了，23:59:00
+  if (compareTime(nowTime, timeArr[timeArr.length - 1])) {
+    return parseInt(subtractTimes('23:59:00', nowTime) + subtractTimes(timeArr[0], '0:00:00'), 10);
+  }
+  // timeArr[0] > nowTime,说明是早上，还没发车
+  if (compareTime(timeArr[0], nowTime)) {
+    return parseInt(subtractTimes(timeArr[0], nowTime), 10);
+  }
 
-export { formatTime, compareTime, getDisplayTimeArr, subtractTimes };
+  for (let i = 0; i < timeArr.length - 1; i++) {
+    // timeArr[i] <= nowTime < timeArr[i + 1]
+    if (!compareTime(timeArr[i], nowTime) && compareTime(timeArr[i + 1], nowTime)) {
+      index = i + 1;
+    }
+  }
+  return subtractTimes(timeArr[index], nowTime);
+}
+
+export { formatTime, compareTime, getDisplayTimeArr, subtractTimes, countTimeInterval };
 

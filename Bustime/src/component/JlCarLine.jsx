@@ -3,15 +3,17 @@ import CarLine from './unit/CarLine';
 import SvgCar from './unit/SvgCar';
 
 import CSSStyles from './JlCarLine.css';
-import { subtractTimes } from './lib/helper';
+import { subtractTimes, compareTime } from './lib/helper';
 
 function JlCarLine({ startTime, endTime, nowTime }) {
   const timeInterval = subtractTimes(endTime, startTime);
-  const prePercent = subtractTimes(nowTime, startTime) / timeInterval;
-  console.log('---JL----');
-  console.log(timeInterval);
-  console.log(prePercent);
-  console.log('---*---');
+  let prePercent;
+  // nowTime> endTime说明是晚上，已经过了班车, startTime>nowTime为早上
+  if (compareTime(nowTime, endTime) || compareTime(startTime, nowTime)) {
+    prePercent = -0.08;
+  } else {
+    prePercent = subtractTimes(nowTime, startTime) / timeInterval;
+  }
   return (
     <div className={CSSStyles.container}>
       <CarLine

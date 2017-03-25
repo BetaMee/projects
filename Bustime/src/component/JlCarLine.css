@@ -3,7 +3,7 @@
     position: absolute;
     width:100px;
     height: 80%;
-    top:10%;
+    top:15%;
     right:25%;
 }
 /*汽车线样式*/
@@ -19,10 +19,15 @@
 .svgcar{
     width: 50px;
     height: 50px;
-    background-color:red;
+    /*background-color: #CB7B83;*/
     position: absolute;
-    top: 0;
+    background: url("../assets/bus.png");
+    top: -10px;
     right:30%;
+    /*改变的时候会动*/
+    transition-property: top;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
 }
 
 
