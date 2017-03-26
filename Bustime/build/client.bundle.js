@@ -12096,7 +12096,7 @@ var App = function (_Component) {
         _react2.default.createElement(_Clock2.default, {
           timeInterval: XpTimeInterval,
           clockStyle: _App2.default.XpClockStyle,
-          station: '\u7280\u6D66-\u4E5D\u91CC'
+          station: '\u7280\u6D66\u5317-\u4E5D\u91CC'
         }),
         _react2.default.createElement(_Clock2.default, {
           timeInterval: JlTimeInterval,

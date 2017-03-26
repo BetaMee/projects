@@ -107,7 +107,7 @@ export default class App extends Component {
         <Clock
           timeInterval={XpTimeInterval}
           clockStyle={CSSStyles.XpClockStyle}
-          station="犀浦-九里"
+          station="犀浦北-九里"
         />
         <Clock
           timeInterval={JlTimeInterval}
