@@ -10,7 +10,7 @@ function JlCarLine({ startTime, endTime, nowTime }) {
   let prePercent;
   // nowTime> endTime说明是晚上，已经过了班车, startTime>nowTime为早上
   if (compareTime(nowTime, endTime) || compareTime(startTime, nowTime)) {
-    prePercent = -0.08;
+    prePercent = -0.05;
   } else {
     prePercent = subtractTimes(nowTime, startTime) / timeInterval;
   }

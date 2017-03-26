@@ -5,7 +5,7 @@ function Clock({ timeInterval, station, clockStyle }) {
   return (
     <div className={clockStyle}>
       <div className={CSSStyles.station}>{station}</div>
-      <div >next:{timeInterval}min</div>
+      <div >下一班:{timeInterval}min</div>
     </div>
   );
 }

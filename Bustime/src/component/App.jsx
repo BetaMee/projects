@@ -74,18 +74,45 @@ export default class App extends Component {
 
     const XpTimeInterval = countTimeInterval(disXpTimeArr, nowTime);
     const JlTimeInterval = countTimeInterval(disJlTimeArr, nowTime);
-    console.log(XpTimeInterval);
+    // 设置会呼吸的背景
+    let bgColor;
+    console.log(nowTime);
+    // 早上7:00:00 <= nowTime <11:00:00
+    if (!compareTime('7:00:00', nowTime) && compareTime('11:00:00', nowTime)) {
+      bgColor = {
+        backgroundImage: 'linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%)',
+      };
+      // 下午11:00:00 <= nowTime <18:00:00
+    } else if (!compareTime('11:00:00', nowTime) && compareTime('18:00:00', nowTime)) {
+      bgColor = {
+        backgroundImage: 'linear-gradient(from bottom left, RGB(247,202,201), RGB(146,168,209))',
+      };
+      // 晚上 11:00:00 <= nowTime <23:59:00
+    } else if (!compareTime('18:00:00', nowTime) && compareTime('23:59:00', nowTime)) {
+      bgColor = {
+        backgroundImage: 'linear-gradient(to top, #88d3ce 0%, #6e45e2 100%)',
+      };
+    } else {
+      bgColor = {
+        backgroundImage: 'linear-gradient(to right, #243949 0%, #517fa4 100%)',
+      };
+    }
+
+
     return (
-      <div className={CSSStyles.bg}>
+      <div
+        className={CSSStyles.bg}
+        style={bgColor}
+      >
         <Clock
           timeInterval={XpTimeInterval}
           clockStyle={CSSStyles.XpClockStyle}
-          station="J-X"
+          station="犀浦-九里"
         />
         <Clock
           timeInterval={JlTimeInterval}
           clockStyle={CSSStyles.JlClockStyle}
-          station="X-J"
+          station="九里-犀浦"
         />
 
         <XpTimeLine

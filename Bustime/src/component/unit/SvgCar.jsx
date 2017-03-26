@@ -22,7 +22,7 @@ function SvgCar({ prePercent, pointerStyle, upTriangleStyle, downTriangleStyle, 
         className={pointerStyle}
         style={carpos}
       >
-        <div  className={upSquareStyle} />
+        <div className={upSquareStyle} />
         <div className={upTriangleStyle} />
 
         <div className={downSquareStyle} />

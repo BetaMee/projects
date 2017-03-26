@@ -154,9 +154,8 @@
 
 
 .TimeLine__expired-3SO4A{
-    /*opacity: 0.7;*/
-    color: #1e1a1a;
-    opacity: 0.3;
+    color: #9E9E9E;
+    opacity: 0.8;
 }
 
 .TimeLine__next-smW-w{
@@ -295,21 +294,16 @@
 }.App__bg-1PiyS{
   width: 100vw;
   height:100vh;
-  /*background: url("../assets/restaurant_icons.png");*/
-  background: -webkit-linear-gradient(bottom left, RGB(247,202,201), RGB(146,168,209));
-  background: linear-gradient(bottom left, RGB(247,202,201), RGB(146,168,209));
-  /*filter: blur(3px);*/
-  /*opacity: 0.5;*/
+  background: -webkit-linear-gradient( bottom left, RGB(247,202,201), RGB(146,168,209));
+  background: linear-gradient( bottom left, RGB(247,202,201), RGB(146,168,209));
   position: relative;
-  /*z-index: 2;*/
 }
 
 .App__XpClockStyle-v-zg3{
   position: absolute;
-  width: 100px;
+  width: 200px;
   height: 100px;
-  /*font-size: 1.2em;*/
-  left: 5%;
+  left: 0%;
   top:5px;
 
   color: white;
@@ -330,13 +324,12 @@
 
 .App__JlClockStyle-r9EKk{
   position: absolute;
-  width: 100px;
+  width: 200px;
   height: 100px;
-  /*font-size: 1.2em;*/
-  right: 5%;
+  right: 0%;
   top:5px;
 
-  color: white;
+  color: RGBA(255,255,255,0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

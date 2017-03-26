@@ -11937,8 +11937,8 @@ _reactDom2.default.render(_react2.default.createElement(_App2.default, { data: _
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var busTimeArr = [['7:20:00', '7:45:00', '8:50:00', '9:00:00', '9:40:00', '10:40:00', '11:30:00', '12:20:00', '13:50:00', '14:50:00', '15:40:00', '16:40:00', '17:30:00', '18:00:00', '18:20:00', '18:50:00', '19:20:00', '20:20:00', '21:10:00', '22:00:00'], // 犀浦到九里
-['7:20:00', '8:00:00', '9:10:00', '10:00:00', '10:50:00', '11:30:00', '13:20:00', '14:10:00', '15:10:00', '16:00:00', '16:50:00', '17:50:00', '18:50:00', '19:50:00', '20:30:00', '21:30:00']];
+var busTimeArr = [['7:20:00', '7:45:00', '8:25:00', '8:50:00', '9:20:00', '9:40:00', '10:10:00', '10:40:00', '11:15:00', '11:30:00', '12:00:00', '12:20:00', '12:45:00', '13:20:00', '13:50:00', '14:20:00', '14:50:00', '15:20:00', '15:40:00', '16:10:00', '16:40:00', '17:35:00', '18:05:00', '18:20:00', '18:50:00', '19:20:00', '20:20:00', '21:10:00', '22:00:00'], // 犀浦到九里
+['7:20:00', '8:00:00', '8:30:00', '9:10:00', '10:00:00', '10:30:00', '10:50:00', '11:30:00', '12:00:00', '12:40:00', '13:20:00', '14:10:00', '15:10:00', '16:00:00', '16:20:00', '16:50:00', '17:20:00', '17:50:00', '18:20:00', '18:50:00', '19:20:00', '19:50:00', '20:30:00', '21:30:00']];
 
 exports.default = busTimeArr;
 
@@ -12063,19 +12063,45 @@ var App = function (_Component) {
 
       var XpTimeInterval = (0, _helper.countTimeInterval)(disXpTimeArr, nowTime);
       var JlTimeInterval = (0, _helper.countTimeInterval)(disJlTimeArr, nowTime);
-      console.log(XpTimeInterval);
+      // 设置会呼吸的背景
+      var bgColor = void 0;
+      console.log(nowTime);
+      // 早上7:00:00 <= nowTime <11:00:00
+      if (!(0, _helper.compareTime)('7:00:00', nowTime) && (0, _helper.compareTime)('11:00:00', nowTime)) {
+        bgColor = {
+          backgroundImage: 'linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%)'
+        };
+        // 下午11:00:00 <= nowTime <18:00:00
+      } else if (!(0, _helper.compareTime)('11:00:00', nowTime) && (0, _helper.compareTime)('18:00:00', nowTime)) {
+        bgColor = {
+          backgroundImage: 'linear-gradient(from bottom left, RGB(247,202,201), RGB(146,168,209))'
+        };
+        // 晚上 11:00:00 <= nowTime <23:59:00
+      } else if (!(0, _helper.compareTime)('18:00:00', nowTime) && (0, _helper.compareTime)('23:59:00', nowTime)) {
+        bgColor = {
+          backgroundImage: 'linear-gradient(to top, #88d3ce 0%, #6e45e2 100%)'
+        };
+      } else {
+        bgColor = {
+          backgroundImage: 'linear-gradient(to right, #243949 0%, #517fa4 100%)'
+        };
+      }
+
       return _react2.default.createElement(
         'div',
-        { className: _App2.default.bg },
+        {
+          className: _App2.default.bg,
+          style: bgColor
+        },
         _react2.default.createElement(_Clock2.default, {
           timeInterval: XpTimeInterval,
           clockStyle: _App2.default.XpClockStyle,
-          station: 'J-X'
+          station: '\u7280\u6D66-\u4E5D\u91CC'
         }),
         _react2.default.createElement(_Clock2.default, {
           timeInterval: JlTimeInterval,
           clockStyle: _App2.default.JlClockStyle,
-          station: 'X-J'
+          station: '\u4E5D\u91CC-\u7280\u6D66'
         }),
         _react2.default.createElement(_XpTimeLine2.default, {
           disTimeArr: disXpTimeArr,
@@ -12147,7 +12173,7 @@ function Clock(_ref) {
     _react2.default.createElement(
       'div',
       null,
-      'next:',
+      '\u4E0B\u4E00\u73ED:',
       timeInterval,
       'min'
     )
@@ -12196,7 +12222,7 @@ function JlCarLine(_ref) {
   var prePercent = void 0;
   // nowTime> endTime说明是晚上，已经过了班车, startTime>nowTime为早上
   if ((0, _helper.compareTime)(nowTime, endTime) || (0, _helper.compareTime)(startTime, nowTime)) {
-    prePercent = -0.08;
+    prePercent = -0.05;
   } else {
     prePercent = (0, _helper.subtractTimes)(nowTime, startTime) / timeInterval;
   }
@@ -12310,7 +12336,7 @@ function XpCarLine(_ref) {
   var prePercent = void 0;
   // nowTime> endTime说明是晚上，已经过了班车, startTime>nowTime为早上
   if ((0, _helper.compareTime)(nowTime, endTime) || (0, _helper.compareTime)(startTime, nowTime)) {
-    prePercent = -0.08;
+    prePercent = -0.05;
   } else {
     prePercent = (0, _helper.subtractTimes)(nowTime, startTime) / timeInterval;
   }
