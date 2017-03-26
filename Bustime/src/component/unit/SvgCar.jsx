@@ -2,7 +2,7 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import CSSStyles from './SvgCar.css';
 
-function SvgCar({ prePercent, carStyle }) {
+function SvgCar({ prePercent, pointerStyle, upTriangleStyle, downTriangleStyle, upSquareStyle, downSquareStyle }) {
   const carpos = {
     top: `${prePercent * 100}%`,
   };
@@ -19,9 +19,15 @@ function SvgCar({ prePercent, carStyle }) {
       transitionLeaveTimeout={1000}
     >
       <div
-        className={carStyle}
+        className={pointerStyle}
         style={carpos}
-      />
+      >
+        <div  className={upSquareStyle} />
+        <div className={upTriangleStyle} />
+
+        <div className={downSquareStyle} />
+        <div className={downTriangleStyle} />
+      </div>
     </ReactCSSTransitionGroup>
   );
 }

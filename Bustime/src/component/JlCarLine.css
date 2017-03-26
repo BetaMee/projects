@@ -15,21 +15,61 @@
     right:50%;
 }
 
-/*汽车样式*/
-.svgcar{
-    width: 50px;
-    height: 50px;
-    /*background-color: #CB7B83;*/
+/*指针样式*/
+.pointer{
     position: absolute;
-    background: url("../assets/bus.png");
     top: -10px;
-    right:30%;
+    right:15%;
     /*改变的时候会动*/
     transition-property: top;
     transition-duration: 2s;
     transition-timing-function: ease-in;
+
+    width:64px;
+    height: 14px;
+}
+
+.upTriangle{
+    position: absolute;
+    top:-100%;
+    border-top: 7.5px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 7.5px solid RGBA(247,202,201,0.5);
+    border-left: 12px solid RGBA(247,202,201,0.5);
+    width:0;
+    height: 0;
+    right: 0;
+}
+
+.downTriangle{
+    position: absolute;
+    top:0;
+    border-top: 7.5px solid RGBA(247,202,201,0.5);
+    border-right: 12px solid transparent;
+    border-bottom: 7.5px solid transparent;
+    border-left: 12px solid RGBA(247,202,201,0.5);
+    width:0;
+    height: 0;
+    right: 0;
 }
 
 
+.upSquare{
+    position: absolute;
+    top:-50%;
+    background-color: RGBA(247,202,201,0.5);
+    width:40px;
+    height: 8px;
+    left: 0;
+}
+
+.downSquare{
+    position: absolute;
+    top:0%;
+    background-color: RGBA(247,202,201,0.5);
+    width:40px;
+    height: 8px;
+    left: 0;
+}
 
 

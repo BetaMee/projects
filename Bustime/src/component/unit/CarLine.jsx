@@ -5,11 +5,11 @@ import CSSStyles from './CarLine.css';
 
 function CarLine({ prePercent, lineStyle }) {
   const preLineStyle = {
-    stroke: 'red',
+    stroke: 'rgba(255,255,255,0.5)',
     strokeWidth: '100%',
   };
   const nextLineStyle = {
-    stroke: '#A43F40',
+    stroke: 'rgba(255,255,255,0.5)',
     strokeWidth: '100%',
   };
   return (

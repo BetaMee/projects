@@ -7048,11 +7048,11 @@ function CarLine(_ref) {
       lineStyle = _ref.lineStyle;
 
   var preLineStyle = {
-    stroke: 'red',
+    stroke: 'rgba(255,255,255,0.5)',
     strokeWidth: '100%'
   };
   var nextLineStyle = {
-    stroke: '#A43F40',
+    stroke: 'rgba(255,255,255,0.5)',
     strokeWidth: '100%'
   };
   return _react2.default.createElement(
@@ -7134,7 +7134,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function SvgCar(_ref) {
   var prePercent = _ref.prePercent,
-      carStyle = _ref.carStyle;
+      pointerStyle = _ref.pointerStyle,
+      upTriangleStyle = _ref.upTriangleStyle,
+      downTriangleStyle = _ref.downTriangleStyle,
+      upSquareStyle = _ref.upSquareStyle,
+      downSquareStyle = _ref.downSquareStyle;
 
   var carpos = {
     top: prePercent * 100 + '%'
@@ -7152,10 +7156,17 @@ function SvgCar(_ref) {
       transitionEnterTimeout: 1000,
       transitionLeaveTimeout: 1000
     },
-    _react2.default.createElement('div', {
-      className: carStyle,
-      style: carpos
-    })
+    _react2.default.createElement(
+      'div',
+      {
+        className: pointerStyle,
+        style: carpos
+      },
+      _react2.default.createElement('div', { className: upSquareStyle }),
+      _react2.default.createElement('div', { className: upTriangleStyle }),
+      _react2.default.createElement('div', { className: downSquareStyle }),
+      _react2.default.createElement('div', { className: downTriangleStyle })
+    )
   );
 }
 
@@ -12197,7 +12208,11 @@ function JlCarLine(_ref) {
       prePercent: prePercent
     }),
     _react2.default.createElement(_SvgCar2.default, {
-      carStyle: _JlCarLine2.default.svgcar,
+      pointerStyle: _JlCarLine2.default.pointer,
+      upTriangleStyle: _JlCarLine2.default.upTriangle,
+      downTriangleStyle: _JlCarLine2.default.downTriangle,
+      upSquareStyle: _JlCarLine2.default.upSquare,
+      downSquareStyle: _JlCarLine2.default.downSquare,
       prePercent: prePercent
     })
   );
@@ -12307,7 +12322,11 @@ function XpCarLine(_ref) {
       prePercent: prePercent
     }),
     _react2.default.createElement(_SvgCar2.default, {
-      carStyle: _XpCarLine2.default.svgcar,
+      pointerStyle: _XpCarLine2.default.pointer,
+      upTriangleStyle: _XpCarLine2.default.upTriangle,
+      downTriangleStyle: _XpCarLine2.default.downTriangle,
+      upSquareStyle: _XpCarLine2.default.upSquare,
+      downSquareStyle: _XpCarLine2.default.downSquare,
       prePercent: prePercent
     })
   );
@@ -12384,7 +12403,7 @@ module.exports = {"station":"Clock__station-2WP2S"};
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"container":"JlCarLine__container-2hFEY","carline":"JlCarLine__carline-KwJ0Z","svgcar":"JlCarLine__svgcar-1TtAf"};
+module.exports = {"container":"JlCarLine__container-2hFEY","carline":"JlCarLine__carline-KwJ0Z","pointer":"JlCarLine__pointer-Pucs8","upTriangle":"JlCarLine__upTriangle-1eL3I","downTriangle":"JlCarLine__downTriangle-AyA1t","upSquare":"JlCarLine__upSquare-22W2O","downSquare":"JlCarLine__downSquare-3G9vS"};
 
 /***/ }),
 /* 106 */
@@ -12398,7 +12417,7 @@ module.exports = {"jlTimeStyle":"JlTimeLine__jlTimeStyle-199I6"};
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"container":"XpCarLine__container-2XrNp","carline":"XpCarLine__carline-2QFvC","svgcar":"XpCarLine__svgcar-2KfWw"};
+module.exports = {"container":"XpCarLine__container-2XrNp","carline":"XpCarLine__carline-2QFvC","pointer":"XpCarLine__pointer-2ItEw","upTriangle":"XpCarLine__upTriangle-2LL3P","downTriangle":"XpCarLine__downTriangle-2U8PN","upSquare":"XpCarLine__upSquare-3BYCq","downSquare":"XpCarLine__downSquare-baerK"};
 
 /***/ }),
 /* 108 */

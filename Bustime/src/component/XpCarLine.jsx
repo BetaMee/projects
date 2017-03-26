@@ -21,7 +21,11 @@ function XpCarLine({ startTime, endTime, nowTime }) {
         prePercent={prePercent}
       />
       <SvgCar
-        carStyle={CSSStyles.svgcar}
+        pointerStyle={CSSStyles.pointer}
+        upTriangleStyle={CSSStyles.upTriangle}
+        downTriangleStyle={CSSStyles.downTriangle}
+        upSquareStyle={CSSStyles.upSquare}
+        downSquareStyle={CSSStyles.downSquare}
         prePercent={prePercent}
       />
     </div>

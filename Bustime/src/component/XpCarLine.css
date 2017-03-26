@@ -15,17 +15,59 @@
     left:50%;
 }
 
-/*车的样式*/
-.svgcar{
-    width: 50px;
-    height: 50px;
-    background-color: #CB7B83;
+/*指针的样式*/
+.pointer{
     position: absolute;
     top: -10px;
-    left:30%;
+    left:15%;
     /*改变的时候会动*/
     transition-property: top;
     transition-duration: 2s;
     transition-timing-function: ease-in;
+
+    width:64px;
+    height: 14px;
 }
 
+.upTriangle{
+    position: absolute;
+    top:-100%;
+    border-top: 7px solid transparent;
+    border-right: 12px solid red;
+    border-bottom: 7px solid red;
+    border-left: 12px solid transparent;
+    width:0;
+    height: 0;
+    left: 0;
+}
+
+.downTriangle{
+    position: absolute;
+    top:0;
+    border-top: 7px solid red;
+    border-right: 12px solid red;
+    border-bottom: 7px solid transparent;
+    border-left: 12px solid transparent;
+    width:0;
+    height: 0;
+    left: 0;
+}
+
+
+.upSquare{
+    position: absolute;
+    top:-50%;
+    background-color: red;
+    width:40px;
+    height: 8px;
+    right: 0;
+}
+
+.downSquare{
+    position: absolute;
+    top:0%;
+    background-color: red;
+    width:40px;
+    height: 8px;
+    right: 0;
+}
