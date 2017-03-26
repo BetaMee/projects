@@ -5,6 +5,7 @@ import JlTimeLine from './JlTimeLine';
 import XpCarLine from './XpCarLine';
 import XpTimeLine from './XpTimeLine';
 import Clock from './Clock';
+import SiteInfo from './SiteInfo';
 // 引入样式
 import CSSStyles from './App.css';
 // 引入外部函数
@@ -134,6 +135,7 @@ export default class App extends Component {
           endTime={JlEndTime}
           nowTime={nowTime}
         />
+        <SiteInfo />
       </div>
     );
   }
