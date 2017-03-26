@@ -99,9 +99,9 @@
 .JlCarLine__upTriangle-1eL3I{
     position: absolute;
     top:-100%;
-    border-top: 7.5px solid transparent;
+    border-top: 7px solid transparent;
     border-right: 12px solid transparent;
-    border-bottom: 7.5px solid RGBA(247,202,201,0.5);
+    border-bottom: 7px solid RGBA(247,202,201,0.5);
     border-left: 12px solid RGBA(247,202,201,0.5);
     width:0;
     height: 0;
@@ -111,9 +111,9 @@
 .JlCarLine__downTriangle-AyA1t{
     position: absolute;
     top:0;
-    border-top: 7.5px solid RGBA(247,202,201,0.5);
+    border-top: 7px solid RGBA(247,202,201,0.5);
     border-right: 12px solid transparent;
-    border-bottom: 7.5px solid transparent;
+    border-bottom: 7px solid transparent;
     border-left: 12px solid RGBA(247,202,201,0.5);
     width:0;
     height: 0;
@@ -126,7 +126,7 @@
     top:-50%;
     background-color: RGBA(247,202,201,0.5);
     width:40px;
-    height: 8px;
+    height: 7px;
     left: 0;
 }
 
@@ -135,7 +135,7 @@
     top:0%;
     background-color: RGBA(247,202,201,0.5);
     width:40px;
-    height: 8px;
+    height: 7px;
     left: 0;
 }
 
@@ -226,8 +226,8 @@
     position: absolute;
     top:-100%;
     border-top: 7px solid transparent;
-    border-right: 12px solid red;
-    border-bottom: 7px solid red;
+    border-right: 12px solid RGBA(146,168,209,0.8);
+    border-bottom: 7px solid RGBA(146,168,209,0.8);
     border-left: 12px solid transparent;
     width:0;
     height: 0;
@@ -237,8 +237,8 @@
 .XpCarLine__downTriangle-2U8PN{
     position: absolute;
     top:0;
-    border-top: 7px solid red;
-    border-right: 12px solid red;
+    border-top: 7px solid RGBA(146,168,209,0.8);
+    border-right: 12px solid RGBA(146,168,209,0.8);
     border-bottom: 7px solid transparent;
     border-left: 12px solid transparent;
     width:0;
@@ -250,18 +250,18 @@
 .XpCarLine__upSquare-3BYCq{
     position: absolute;
     top:-50%;
-    background-color: red;
+    background-color: RGBA(146,168,209,0.8);
     width:40px;
-    height: 8px;
+    height: 7px;
     right: 0;
 }
 
 .XpCarLine__downSquare-baerK{
     position: absolute;
     top:0%;
-    background-color: red;
+    background-color: RGBA(146,168,209,0.8);
     width:40px;
-    height: 8px;
+    height: 7px;
     right: 0;
 }.XpTimeLine__xpTimeStyle-3PEdo{
   height: 80%;

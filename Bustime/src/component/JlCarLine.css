@@ -32,9 +32,9 @@
 .upTriangle{
     position: absolute;
     top:-100%;
-    border-top: 7.5px solid transparent;
+    border-top: 7px solid transparent;
     border-right: 12px solid transparent;
-    border-bottom: 7.5px solid RGBA(247,202,201,0.5);
+    border-bottom: 7px solid RGBA(247,202,201,0.5);
     border-left: 12px solid RGBA(247,202,201,0.5);
     width:0;
     height: 0;
@@ -44,9 +44,9 @@
 .downTriangle{
     position: absolute;
     top:0;
-    border-top: 7.5px solid RGBA(247,202,201,0.5);
+    border-top: 7px solid RGBA(247,202,201,0.5);
     border-right: 12px solid transparent;
-    border-bottom: 7.5px solid transparent;
+    border-bottom: 7px solid transparent;
     border-left: 12px solid RGBA(247,202,201,0.5);
     width:0;
     height: 0;
@@ -59,7 +59,7 @@
     top:-50%;
     background-color: RGBA(247,202,201,0.5);
     width:40px;
-    height: 8px;
+    height: 7px;
     left: 0;
 }
 
@@ -68,7 +68,7 @@
     top:0%;
     background-color: RGBA(247,202,201,0.5);
     width:40px;
-    height: 8px;
+    height: 7px;
     left: 0;
 }
 

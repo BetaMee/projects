@@ -33,8 +33,8 @@
     position: absolute;
     top:-100%;
     border-top: 7px solid transparent;
-    border-right: 12px solid red;
-    border-bottom: 7px solid red;
+    border-right: 12px solid RGBA(146,168,209,0.8);
+    border-bottom: 7px solid RGBA(146,168,209,0.8);
     border-left: 12px solid transparent;
     width:0;
     height: 0;
@@ -44,8 +44,8 @@
 .downTriangle{
     position: absolute;
     top:0;
-    border-top: 7px solid red;
-    border-right: 12px solid red;
+    border-top: 7px solid RGBA(146,168,209,0.8);
+    border-right: 12px solid RGBA(146,168,209,0.8);
     border-bottom: 7px solid transparent;
     border-left: 12px solid transparent;
     width:0;
@@ -57,17 +57,17 @@
 .upSquare{
     position: absolute;
     top:-50%;
-    background-color: red;
+    background-color: RGBA(146,168,209,0.8);
     width:40px;
-    height: 8px;
+    height: 7px;
     right: 0;
 }
 
 .downSquare{
     position: absolute;
     top:0%;
-    background-color: red;
+    background-color: RGBA(146,168,209,0.8);
     width:40px;
-    height: 8px;
+    height: 7px;
     right: 0;
 }
