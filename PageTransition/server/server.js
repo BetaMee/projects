@@ -12,7 +12,6 @@ import {match, RouterContext} from 'react-router';
 import AppRoutes from '../common/AppRoutes';//前端路由
 
 import renderFullPage from './lib/view';
-import getInitialData from './lib/helper';
 
 
 var app = express();
@@ -42,11 +41,9 @@ if(process.env.NODE_ENV === 'development') {
 
 
 
-
-
-
 app.get('*',(req, res)=>{
-
+	
+	//要使用服务端渲染，则启用以下代码
   match( {routes:AppRoutes, location:req.url}, (err, redirectLocation, renderProps)=>{
     
     if(err) {
