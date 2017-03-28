@@ -42,5 +42,9 @@
 
 使用的ReactTransition + Animate.css开发的页面切换动画。
 
-查看
+查看: [PageTransition](https://betamee.github.io/projects/PageTransition/)
+
+> 项目结构中`index.html`是github上用于展示静态页面的入口页，引用打包好的文件，作demo展示。资源引用有一点问题，
+因为本项目是使用了server side rendering技术，而github只支持静态文件，要想查看完整原理，请clone本仓库，本地运行。`index.html`与本项目无关。
+
 
