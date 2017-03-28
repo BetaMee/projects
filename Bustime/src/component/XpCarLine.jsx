@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CarLine from './unit/CarLine';
 import SvgCar from './unit/SvgCar';
 
