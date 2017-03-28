@@ -37,6 +37,7 @@
 
 查看： [校车时刻表](https://betamee.github.io/projects/Bustime/)
 
+CSS绘制有坑： [关于CSS绘制图形的分辨率问题 #1](https://github.com/BetaMee/projects/issues/1)
 
 ### 5.page transition
 
