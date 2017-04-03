@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 // 路由管理
 import { Router, browserHistory } from 'react-router';
-import AppRoutes from '../common/AppRoutes.js';
+import AppRoutes from '../common/AppRoutes';
 // 状态管理
 
 

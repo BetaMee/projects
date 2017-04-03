@@ -1,0 +1,5 @@
+.container{
+  background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+  width: 100%;
+  height: 800px;
+}
