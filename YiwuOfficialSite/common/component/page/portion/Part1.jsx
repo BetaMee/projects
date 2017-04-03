@@ -22,15 +22,17 @@ function Part1() {
           </div>
           <div className={CSSStyles.buttom}>
             <a href="#" className={CSSStyles.b1}>现在下载</a>
-            <a className={CSSStyles.b2}>查看证书</a>          
+            <a href="#" className={CSSStyles.b2}>查看证书</a>          
           </div>
-          <span> 
-            现在可在安卓市场上下载
-          </span>
+          <div className={CSSStyles.attention}>
+            <span> 
+              现在可在安卓市场上下载
+            </span>
+          </div>
       </div>
 
-      <div>
-      
+      <div className={CSSStyles.pic}>
+        <div />
       </div>
     </section>
   );

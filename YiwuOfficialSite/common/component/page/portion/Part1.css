@@ -24,14 +24,15 @@
 }
 
 .intro{
-    height: 150px;
+    height: 230px;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .slogan{
-  height: 100px;
+  width: 100%;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,3 +76,35 @@
   text-decoration: none;
 }
 
+.attention{
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attention span{
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+
+.pic{
+  width:100%;
+  height: 470px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic div{
+  width:500px;
+  height: 100%;
+
+  background-image:  url('../../../../client/assets/images/发布易物.png');
+  background-position-y: 26%;
+  background-position-x: center;  
+}
