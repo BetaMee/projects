@@ -3,7 +3,7 @@ module.exports = {
   session: {
     secret: 'react',
     key: 'react',
-    maxAge: 2592000000
+    maxAge: 2592000000,
   },
-  mongodb: 'mongodb://localhost:27017/react'
+  mongodb: 'mongodb://localhost:27017/react',
 };
