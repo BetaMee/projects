@@ -11,12 +11,25 @@ function Part2() {
       </div>
 
       <div className={CSSStyles.intro}>
-        SO Powerful
+        <span>Plain text has been around for decades and it's here to stay. 
+        Monodraw allows you to easily create text-based art (like diagrams, layouts, flow charts) 
+        and visually represent algorithms, data structures, binary formats and more. 
+        Because it's all just text, it can be easily embedded almost anywhere. 
+        Of course, exporting as images is also supported (PNG and SVG).</span>
       </div>
 
       <div className={CSSStyles.main}>
         <div className={CSSStyles.features}>
-          这是一款集编辑和各种好玩的功能于一体的易物
+          <div>
+            <h2>Diagrams</h2>
+            <p>A picture is worth a thousand words. 
+            A diagram is probably worth twice as much. 
+            Enhance your technical documentation (code, specs) with easy to comprehend textual art. 
+            Visualisation of data structures,
+            algorithms and data formats plays a crucial role in understanding. 
+            You will be reading the code more often than writing it, 
+            so why not make it much easier to grasp.</p>
+          </div>
         </div>
 
         <div className={CSSStyles.pic}>
