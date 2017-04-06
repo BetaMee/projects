@@ -12,7 +12,7 @@ class Header extends Component{//es6
     return (
       <header className={CSSStyles.header}>
         <div className={CSSStyles.logo}>
-          Logo
+        logo
         </div>
         <div className={CSSStyles.menu}>
             <Link to="/">HOME</Link>

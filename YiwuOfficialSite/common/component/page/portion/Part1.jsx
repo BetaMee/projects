@@ -8,8 +8,7 @@ function Part1() {
     <section className={CSSStyles.container}>
       <header className={CSSStyles.header}>
         <div className={CSSStyles.table}>
-          <div>
-            Logo
+          <div className={CSSStyles.logo}>
           </div>
           <div>
             fllow us
