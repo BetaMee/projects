@@ -7,6 +7,8 @@ import Part2 from './portion/Part2';
 import Part3 from './portion/Part3';
 import Part4 from './portion/Part4';
 import Part5 from './portion/Part5';
+import Part6 from './portion/Part6';
+
 
 
 class Indexpage extends Component {
@@ -22,6 +24,7 @@ class Indexpage extends Component {
         <Part3 />
         <Part4 />
         <Part5 />
+        <Part6 />
       </div>
     );
   }
