@@ -12,8 +12,6 @@ import {match, RouterContext} from 'react-router';
 import AppRoutes from '../common/AppRoutes';//前端路由
 
 import renderFullPage from './lib/view';
-import getInitialData from './lib/helper';
-
 
 var app = express();
 // 设置静态文件目录
