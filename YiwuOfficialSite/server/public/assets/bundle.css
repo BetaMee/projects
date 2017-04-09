@@ -55,6 +55,14 @@
           align-items: center;
 }
 
+.Part1__logo-3VImI{
+  background-image: url(/assets/bundleImg/51fdb8e1.logo.png);
+  background-position: center center;
+  background-size: cover;
+  width:50px;
+  height:50px;
+}
+
 .Part1__intro-3oZbS{
     height: 230px;
     max-width: 900px;
@@ -169,6 +177,7 @@
   height: 100%;
 
   background-image:  url(/assets/bundleImg/cffab784.发布易物.png);
+  background-size: cover;
   background-position-y: 26%;
   background-position-x: center;  
 }.Part2__container-1s5nz{
@@ -176,20 +185,356 @@
   width: 100%;
   height: 800px;
 }
-.Part3__container-2QvlY{
+
+.Part2__slogan-1iee0{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+}
+
+.Part2__slogan-1iee0 span{
+  font-size: 2em;
+  padding: 10px;
+}
+
+
+.Part2__intro-2SmWg{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Part2__intro-2SmWg span{
+  width:50%;
+  font-size: 1rem;
+  /*line-height: 1.5em;*/
+}
+
+.Part2__main-TjlED{
+  margin-top: 50px; 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Part2__features-2QGtF{
+  width: 73%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Part2__features-2QGtF div{
+  width: 50%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+
+
+.Part2__pic-1JEkr{
+  width:27%;
+  height: 600px;
+  background-image: url(/assets/bundleImg/e1de6f8b.主页.png);
+  background-position: center center;
+  background-size: cover;
+}.Part3__container-2QvlY{
   background-image: -webkit-linear-gradient(left, #0acffe 0%, #495aff 100%);
   background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
   width: 100%;
   height: 800px;
 }
-.Part4__container-2Kmj4{
+
+.Part3__slogan-2EME8{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+}
+
+.Part3__slogan-2EME8 span{
+  font-size: 2em;
+  padding: 10px;
+}
+
+
+.Part3__intro-3EJMv{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Part3__intro-3EJMv span{
+  width:50%;
+  font-size: 1rem;
+  /*line-height: 1.5em;*/
+}
+
+.Part3__main-lKbff{
+  margin-top: 50px; 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Part3__features-131wK{
+  width: 73%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Part3__features-131wK div{
+  width: 50%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+
+
+.Part3__pic--nKWg{
+  width:27%;
+  height: 600px;
+  background-image: url(/assets/bundleImg/e1de6f8b.主页.png);
+  background-position: center center;
+  background-size: cover;
+}.Part4__container-2Kmj4{
   background:white;
   width: 100%;
   height: 800px;
 }
-.Part5__container-2v8j7{
+
+
+.Part4__main-Szb3m{
+  margin-top: 50px; 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Part4__features-2rtgt{
+  width: 73%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Part4__features-2rtgt div{
+  width: 50%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+
+
+.Part4__pic-25e2b{
+  width:27%;
+  height: 600px;
+  background-image: url(/assets/bundleImg/e1de6f8b.主页.png);
+  background-position: center center;
+  background-size: cover;
+}.Part5__container-2v8j7{
   background-image: -webkit-linear-gradient(315deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
   background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
   width: 100%;
-  height: 800px;
+  height: 600px;
+}
+
+
+.Part5__intro-35EYL{
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center; 
+   padding-top: 50px;
+   margin-bottom: 20px;
+}
+
+.Part5__title-3czyB{
+  font-size:2em;
+}
+
+.Part5__slogan-1_QnK{
+  color:#777
+}
+
+.Part5__tags-b1agp{
+  margin: 0 auto;
+  width:80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Part5__tag-2woA6{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width:100%;
+  padding-right: 10px;
+}.Part6__container-1wEXZ{
+  background-image: #ffffff;
+  width: 100%;
+  height: 100px;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Part6__info-3kAlh{
+  width:30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Part6__logo-2He1S{
+  width:70%;
 }
