@@ -7,8 +7,8 @@ import Indexpage from './component/page/Indexpage'; // 首页
 
 
 const AppRoutes = (
-  <Route path="/" component={Layout}>
-    <IndexRoute component={Indexpage} />
+  <Route path="*" component={Layout}>
+    <Route path="*" component={Indexpage} />
   </Route>
 );
 
