@@ -27,13 +27,12 @@ function renderFullPage(html,env) {
         <html lang="en">
         <head>
           <meta charset="UTF-8">
-          <title>十二棵橡树</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <title>易物科技</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"/>
           <link rel="stylesheet"  href="/assets/bundle.css">
           <style>
           body{
               margin:0px;
-              scroll:no
           }
           </style>
         </head>

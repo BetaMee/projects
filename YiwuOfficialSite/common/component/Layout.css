@@ -1,7 +1,7 @@
 /*布局*/
 .layout{
   box-sizing: border-box;
-  width:100%;
+  width:98.5vw;
   min-height: 500px;
 }
 
