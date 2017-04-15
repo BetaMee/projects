@@ -10,14 +10,14 @@ function Part1() {
         <div className={CSSStyles.table}>
           <div className={CSSStyles.logo}>
           </div>
-          <div>
-            fllow us
+          <div className={CSSStyles.link}>
+            @FLLOW US
           </div>
         </div>
       </header>
       <div className={CSSStyles.intro}>
           <div className={CSSStyles.slogan}>
-            <span>这是一款全新的产品</span>
+            <span>易你所想，物尽其用</span>
           </div>
           <div className={CSSStyles.buttom}>
             <a href="#" className={CSSStyles.b1}>现在下载</a>

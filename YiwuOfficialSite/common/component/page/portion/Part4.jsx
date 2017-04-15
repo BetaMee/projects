@@ -9,7 +9,7 @@ function Part4() {
       <div className={CSSStyles.main}>
          <div className={CSSStyles.features}>
           <div>
-            <h2>Diagrams</h2>
+            <h2>查看资料</h2>
             <p>A picture is worth a thousand words. 
             A diagram is probably worth twice as much. 
             Enhance your technical documentation (code, specs) with easy to comprehend textual art. 
