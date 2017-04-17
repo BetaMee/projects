@@ -1,7 +1,21 @@
 .container{
-  background-image: linear-gradient(to left, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+  background-image: url('../../../../client/assets/images/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 800px;
+}
+
+@media only screen and (max-width:500px) {
+  .container{
+    background-image: url('../../../../client/assets/images/mbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+}
+
+
 }
 
 .header{
@@ -63,14 +77,14 @@
   align-items: center;
 
   height: 50px;
-  max-width: 300px;
+  max-width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .b1{
-  background:  linear-gradient(to top, #00cdac 0%, #8ddad5 100%);
-  padding: 5px 30px;
+  background:  #fae24f;
+  padding: 8px 40px;
   border-radius: 5px;
 
   font-weight: 500;
@@ -80,8 +94,8 @@
 }
 
 .b2{
-  background:  linear-gradient(to top, #00cdac 0%, #8ddad5 100%);
-  padding: 5px 30px;
+  background:  #fae24f;
+  padding: 8px 40px;
   border-radius: 5px;
 
   font-weight: 500;
@@ -92,10 +106,10 @@
 
 .attention{
   height: 80px;
-
-  display: flex;
+  display: none;  
+  /*display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
 }
 
 .attention span{
