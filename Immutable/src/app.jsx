@@ -4,7 +4,6 @@ import {render} from 'react-dom';
 import A from './sub/a.jsx';
 import B from './sub/b.jsx';
 import C from './sub/c.jsx';
-import D from './sub/d.jsx';
 
 
 class App extends Component{
@@ -34,7 +33,7 @@ class App extends Component{
   }
   
   componentDidUpdate (prevProps, prevState) {
-    console.log(`App did Update: ${nextProps} + ${nextState}`);        
+    console.log(`App did Update: ${nextProps} + ${nextState}`);
   }
 
   componentWillUnmount () {
@@ -46,8 +45,7 @@ class App extends Component{
       <div>
         <A/>
         <B/>
-        <C/>
-        <D/>        
+        <C/>        
       </div>
     );
   }

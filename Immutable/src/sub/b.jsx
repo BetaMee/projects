@@ -50,4 +50,4 @@ class B extends Component{
 }
 
 
-export default A;
+export default B;

@@ -14,6 +14,9 @@ module.exports={
     filename: 'client.bundle.js',
     publicPath: '/assets/'
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module:{
     rules:[
       {
