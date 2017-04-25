@@ -1,9 +1,14 @@
-const Immutable = require('immutable');
+const express = require('express');
 
-var obj = { 1: "one" };
+var app = express();
 
-var map = Immutable.Map(obj);
-var a=map.get("1"); // "one"
-map.get(1);   // undefined
-console.log(a);
-console.log(map.get(1));
+app.use(express.static('build'));
+
+app.get('*', function(req, res) {
+  res.sendFile(__dirname + '/index.html');
+});
+
+
+app.listen(3000,function() {
+  console.log('app is running at 3000');
+});
