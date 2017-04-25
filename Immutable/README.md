@@ -10,3 +10,6 @@
 
 ##  1.组件挂载顺序
 
+![Mount Flow](./doc/image/mountFlow.png)
+
+由图片可知，组件的mount顺序是先等所有的组件**will mount**完后再**did mount**，并且按照在render函数中的位置排列。
