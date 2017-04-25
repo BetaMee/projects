@@ -43,6 +43,7 @@
   background-size: cover;
   width:50px;
   height:50px;
+  display: none;
 }
 
 .link{
@@ -73,17 +74,20 @@
 .buttom{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
   height: 50px;
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+
+  margin-top: 10px;
 }
 
 .b1{
-  background:  #fae24f;
+  background: transparent;
+  border: 2px solid #ffffff;
   padding: 8px 40px;
   border-radius: 5px;
 
@@ -93,16 +97,7 @@
   text-decoration: none;
 }
 
-.b2{
-  background:  #fae24f;
-  padding: 8px 40px;
-  border-radius: 5px;
 
-  font-weight: 500;
-  font-size: 20px;
-  color: #fff;
-  text-decoration: none;
-}
 
 .attention{
   height: 80px;

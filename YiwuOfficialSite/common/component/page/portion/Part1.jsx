@@ -21,7 +21,6 @@ function Part1() {
           </div>
           <div className={CSSStyles.buttom}>
             <a href="#" className={CSSStyles.b1}>现在下载</a>
-            <a href="#" className={CSSStyles.b2}>查看证书</a>          
           </div>
           <div className={CSSStyles.attention}>
             <span> 
