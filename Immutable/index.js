@@ -22,7 +22,7 @@ if(process.env.NODE_ENV === 'development') {
 		}
 	}));
 	app.use(require('webpack-hot-middleware')(compiler));
-	app.use(express.static(path.resolve(__dirname,'./src')));//与webpack.dev中一致
+	app.use(express.static(path.resolve(__dirname,'./src')));//与webpack.config中一致
   app.use(express.static('build'));
 }else {
   app.use(express.static('build'));	

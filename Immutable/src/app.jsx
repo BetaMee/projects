@@ -53,4 +53,4 @@ class App extends Component{
 }
 
 
-render(<App hello="ddd"/>, document.getElementById('app'));
+render(<App/>, document.getElementById('app'));
