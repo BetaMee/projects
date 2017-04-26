@@ -7,6 +7,7 @@ import C3 from './c/c3';
 class C extends Component{
   constructor(props){
     super(props);
+    console.log(`C constructor,props are: ${props}`);
   }
 
   

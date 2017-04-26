@@ -31,29 +31,13 @@ module.exports={
   },
 
   plugins:[
-    // new webpack.DefinePlugin({
-		// 	'process.env': {
-		// 		NODE_ENV: JSON.stringify('production'),
-		// 		WEBPACK: true
-		// 	}
-		// }),
-		// new webpack.optimize.UglifyJsPlugin({
-		// 	compressor: {
-		// 		warnings: false
-		// 	}
-		// }),
-    // new ExtractTextPlugin('bundle.css'),
-    // new webpack.optimize.CommonsChunkPlugin({//拆分打包文件，出现共用文件则打包进common.js中
-    //         name: "commons",
-    //         filename: "commons.js",
-    //         minChunks:2
-    // }),
-		// new CopyWebpackPlugin([
-		// 	{
-		// 		from: path.resolve(__dirname, 'src', 'assets'),
-		// 		to: path.resolve(__dirname, 'dist', 'assets')
-		// 	}
-		// ]),
+    new webpack.HotModuleReplacementPlugin(),
+		new webpack.NoEmitOnErrorsPlugin(),
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: JSON.stringify('development'),
+			}
+		})
   ]
 }
 

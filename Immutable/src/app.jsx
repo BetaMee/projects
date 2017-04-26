@@ -9,9 +9,10 @@ import C from './sub/c.jsx';
 class App extends Component{
   constructor(props){
     super(props);
+    console.log(`App constructor`);
+    console.log(props);
   }
 
-  
    componentWillMount() {
     console.log('App will mount');
   }
@@ -52,4 +53,4 @@ class App extends Component{
 }
 
 
-render(<App/>, document.getElementById('app'));
+render(<App hello="ddd"/>, document.getElementById('app'));

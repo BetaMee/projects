@@ -5,6 +5,7 @@ import React ,{Component} from 'react';
 class A2 extends Component{
   constructor(props){
     super(props);
+    console.log(`a2 constructor,props are: ${props}`);
   }
 
   

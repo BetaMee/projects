@@ -7,6 +7,7 @@ import B3 from './b/b3';
 class B extends Component{
   constructor(props){
     super(props);
+    console.log(`B constructor,props are: ${props}`);
   }
 
   

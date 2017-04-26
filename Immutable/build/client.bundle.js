@@ -9550,7 +9550,11 @@ var App = function (_Component) {
   function App(props) {
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+    console.log('App constructor');
+    console.log(props);
+    return _this;
   }
 
   _createClass(App, [{
@@ -9649,7 +9653,10 @@ var A = function (_Component) {
   function A(props) {
     _classCallCheck(this, A);
 
-    return _possibleConstructorReturn(this, (A.__proto__ || Object.getPrototypeOf(A)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (A.__proto__ || Object.getPrototypeOf(A)).call(this, props));
+
+    console.log('A constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(A, [{
@@ -9736,7 +9743,10 @@ var A1 = function (_Component) {
   function A1(props) {
     _classCallCheck(this, A1);
 
-    return _possibleConstructorReturn(this, (A1.__proto__ || Object.getPrototypeOf(A1)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (A1.__proto__ || Object.getPrototypeOf(A1)).call(this, props));
+
+    console.log('a1 constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(A1, [{
@@ -9821,7 +9831,10 @@ var A2 = function (_Component) {
   function A2(props) {
     _classCallCheck(this, A2);
 
-    return _possibleConstructorReturn(this, (A2.__proto__ || Object.getPrototypeOf(A2)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (A2.__proto__ || Object.getPrototypeOf(A2)).call(this, props));
+
+    console.log('a2 constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(A2, [{
@@ -9906,7 +9919,10 @@ var A3 = function (_Component) {
   function A3(props) {
     _classCallCheck(this, A3);
 
-    return _possibleConstructorReturn(this, (A3.__proto__ || Object.getPrototypeOf(A3)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (A3.__proto__ || Object.getPrototypeOf(A3)).call(this, props));
+
+    console.log('a3 constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(A3, [{
@@ -10003,7 +10019,10 @@ var B = function (_Component) {
   function B(props) {
     _classCallCheck(this, B);
 
-    return _possibleConstructorReturn(this, (B.__proto__ || Object.getPrototypeOf(B)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (B.__proto__ || Object.getPrototypeOf(B)).call(this, props));
+
+    console.log('B constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(B, [{
@@ -10090,7 +10109,10 @@ var B1 = function (_Component) {
   function B1(props) {
     _classCallCheck(this, B1);
 
-    return _possibleConstructorReturn(this, (B1.__proto__ || Object.getPrototypeOf(B1)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (B1.__proto__ || Object.getPrototypeOf(B1)).call(this, props));
+
+    console.log('b1 constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(B1, [{
@@ -10175,7 +10197,10 @@ var B2 = function (_Component) {
   function B2(props) {
     _classCallCheck(this, B2);
 
-    return _possibleConstructorReturn(this, (B2.__proto__ || Object.getPrototypeOf(B2)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (B2.__proto__ || Object.getPrototypeOf(B2)).call(this, props));
+
+    console.log('b2 constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(B2, [{
@@ -10260,7 +10285,10 @@ var B3 = function (_Component) {
   function B3(props) {
     _classCallCheck(this, B3);
 
-    return _possibleConstructorReturn(this, (B3.__proto__ || Object.getPrototypeOf(B3)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (B3.__proto__ || Object.getPrototypeOf(B3)).call(this, props));
+
+    console.log('b3 constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(B3, [{
@@ -10357,7 +10385,10 @@ var C = function (_Component) {
   function C(props) {
     _classCallCheck(this, C);
 
-    return _possibleConstructorReturn(this, (C.__proto__ || Object.getPrototypeOf(C)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (C.__proto__ || Object.getPrototypeOf(C)).call(this, props));
+
+    console.log('C constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(C, [{
@@ -10444,7 +10475,10 @@ var C1 = function (_Component) {
   function C1(props) {
     _classCallCheck(this, C1);
 
-    return _possibleConstructorReturn(this, (C1.__proto__ || Object.getPrototypeOf(C1)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (C1.__proto__ || Object.getPrototypeOf(C1)).call(this, props));
+
+    console.log('c1 constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(C1, [{
@@ -10529,7 +10563,10 @@ var C2 = function (_Component) {
   function C2(props) {
     _classCallCheck(this, C2);
 
-    return _possibleConstructorReturn(this, (C2.__proto__ || Object.getPrototypeOf(C2)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (C2.__proto__ || Object.getPrototypeOf(C2)).call(this, props));
+
+    console.log('c2 constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(C2, [{
@@ -10614,7 +10651,10 @@ var C3 = function (_Component) {
   function C3(props) {
     _classCallCheck(this, C3);
 
-    return _possibleConstructorReturn(this, (C3.__proto__ || Object.getPrototypeOf(C3)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (C3.__proto__ || Object.getPrototypeOf(C3)).call(this, props));
+
+    console.log('c3 constructor,props are: ' + props);
+    return _this;
   }
 
   _createClass(C3, [{
