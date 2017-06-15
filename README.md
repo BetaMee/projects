@@ -47,4 +47,7 @@ CSS绘制有坑： [关于CSS绘制图形的分辨率问题 #1](https://github.c
 
 > **PageTransition**项目结构中`index.html`是github上用于展示静态页面的入口页，引用打包好的文件，作demo展示。资源引用有一点问题，因为本项目是使用了server side rendering技术，而github只支持静态文件，要想查看完整原理，请clone本仓库，本地运行。`index.html`与本项目无关。
 
+### 6. ES6版的弹幕引擎
+
+[Damoo](https://github.com/BetaMee/Damoo)
 
